@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joshua Tudtud | Junior SOC Analyst &amp; Cybersecurity Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            obsidian: '#0A0D14',
+            slatecard: '#111622',
+            slateborder: '#1E293B',
+            cyber: {
+              cyan: '#06B6D4',
+              indigo: '#6366F1',
+              violet: '#8B5CF6',
+              emerald: '#10B981',
+              amber: '#F59E0B',
+              crimson: '#EF4444',
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body {
+      background-color: #0A0D14;
+      color: #F8FAFC;
+      background-image:
+        radial-gradient(circle at 15% 15%, rgba(6, 182, 212, 0.08), transparent 35%),
+        radial-gradient(circle at 85% 30%, rgba(99, 102, 241, 0.08), transparent 35%),
+        linear-gradient(to right, rgba(30, 41, 59, 0.25) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(30, 41, 59, 0.25) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 44px 44px, 44px 44px;
+    }
+    .glass-panel {
+      background: rgba(17, 22, 34, 0.86);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(30, 41, 59, 0.95);
+    }
+    .stage-pill-active {
+      background: linear-gradient(135deg, rgba(6, 182, 212, 0.16), rgba(99, 102, 241, 0.16));
+      border-color: #06B6D4;
+      box-shadow: 0 0 20px rgba(6, 182, 212, 0.15);
+    }
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0A0D14;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1E293B;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #334155;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-cyan-500/30 selection:text-cyan-200">
+
+  <!-- Sticky Top Navigation -->
+  <header class="sticky top-0 z-40 border-b border-slate-800/80 bg-[#0A0D14]/85 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-2.5 group">
+        <div class="w-9 h-9 rounded-lg bg-cyan-500/10 border border-cyan-500/40 flex items-center justify-center text-cyan-400 group-hover:bg-cyan-500/20 transition">
+          <i data-lucide="shield-check" class="w-5 h-5"></i>
+        </div>
+        <span class="font-mono font-bold tracking-wider text-sm sm:text-base text-slate-100">
+          JT <span class="text-cyan-400">//</span> SEC
+        </span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-400">
+        <a href="#about" class="hover:text-cyan-400 transition">About</a>
+        <a href="#soc-buddy" class="hover:text-cyan-400 transition flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
+          SOC-Buddy Showcase
+        </a>
+        <a href="#labs" class="hover:text-cyan-400 transition">Security Labs</a>
+        <a href="#skills" class="hover:text-cyan-400 transition">Skills</a>
+        <a href="#certifications" class="hover:text-cyan-400 transition">Certifications</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="#contact" class="px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold bg-cyan-500 hover:bg-cyan-400 text-slate-950 transition shadow-lg shadow-cyan-500/20">
+          Connect
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 space-y-24">
+
+    <!-- 1. Hero & About Section -->
+    <section id="about" class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-7 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+          <span>AVAILABLE FOR TIER-1 SOC &amp; CYBERSECURITY ROLES</span>
+        </div>
+
+        <div class="space-y-3">
+          <p class="font-mono text-sm text-cyan-400 tracking-wide uppercase">Bacolod, Philippines • Security Operations &amp; Threat Defense</p>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1]">
+            Joshua Tudtud
+          </h1>
+          <h2 class="text-xl sm:text-2xl font-semibold text-slate-300">
+            Junior SOC Analyst &amp; Threat Detection Enthusiast
+          </h2>
+        </div>
+
+        <p class="text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl">
+          Dedicated cybersecurity practitioner combining hands-on SIEM monitoring, packet forensics, and deception engineering with calm, clear communication. Certified in <span class="text-slate-200 font-medium">TESDA Cyber Threat Management</span> and <span class="text-slate-200 font-medium">Cisco Networking</span>, I bridge technical threat investigation with approachable teamwork so both technical teams and non-technical stakeholders can act decisively under pressure.
+        </p>
+
+        <div class="flex flex-wrap items-center gap-4 pt-2">
+          <a href="#soc-buddy" class="px-5 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold text-sm flex items-center gap-2 transition shadow-lg shadow-cyan-500/20">
+            <i data-lucide="cpu" class="w-4 h-4"></i>
+            Explore SOC-Buddy Case Study
+          </a>
+          <a href="#certifications" class="px-5 py-3 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700 text-slate-200 font-semibold text-sm flex items-center gap-2 transition">
+            <i data-lucide="award" class="w-4 h-4 text-cyan-400"></i>
+            View Credentials
+          </a>
+        </div>
+
+        <!-- Quick Highlights -->
+        <div class="grid grid-cols-3 gap-4 pt-4 border-t border-slate-800/80 max-w-xl">
+          <div>
+            <div class="font-mono text-xl sm:text-2xl font-bold text-white">3</div>
+            <div class="text-xs text-slate-400">Verified Industry Certs</div>
+          </div>
+          <div>
+            <div class="font-mono text-xl sm:text-2xl font-bold text-cyan-400">SIEM + PCAP</div>
+            <div class="text-xs text-slate-400">Splunk &amp; Wireshark Focus</div>
+          </div>
+          <div>
+            <div class="font-mono text-xl sm:text-2xl font-bold text-emerald-400">Human-First</div>
+            <div class="text-xs text-slate-400">Collaborative Incident Ops</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Terminal Card -->
+      <div class="lg:col-span-5">
+        <div class="glass-panel rounded-2xl overflow-hidden shadow-2xl border border-slate-800">
+          <div class="bg-slate-900/90 px-4 py-3 border-b border-slate-800 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
+              <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+              <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+            </div>
+            <div class="flex items-center gap-1 bg-slate-950 p-1 rounded-lg border border-slate-800 text-xs font-mono">
+              <button onclick="switchTerminalTab('profile')" id="term-tab-profile" class="px-2.5 py-1 rounded bg-cyan-500/20 text-cyan-300 font-semibold transition">profile.json</button>
+              <button onclick="switchTerminalTab('whoami')" id="term-tab-whoami" class="px-2.5 py-1 rounded text-slate-400 hover:text-slate-200 transition">whoami</button>
+              <button onclick="switchTerminalTab('stack')" id="term-tab-stack" class="px-2.5 py-1 rounded text-slate-400 hover:text-slate-200 transition">stack --list</button>
+            </div>
+          </div>
+
+          <div class="p-5 font-mono text-xs sm:text-sm leading-relaxed text-slate-300 min-h-[290px] flex flex-col justify-between bg-[#090D16]">
+            <div id="term-content-profile" class="space-y-1.5">
+              <div class="text-slate-500">// Analyst Identity &amp; Operational Readiness</div>
+              <div><span class="text-cyan-400">"analyst"</span>: <span class="text-emerald-400">"Joshua Tudtud"</span>,</div>
+              <div><span class="text-cyan-400">"role"</span>: <span class="text-emerald-400">"Junior SOC Analyst / Threat Responder"</span>,</div>
+              <div><span class="text-cyan-400">"location"</span>: <span class="text-emerald-400">"Bacolod, Philippines"</span>,</div>
+              <div><span class="text-cyan-400">"core_tools"</span>: [<span class="text-amber-300">"Splunk"</span>, <span class="text-amber-300">"Wireshark"</span>, <span class="text-amber-300">"GoPhish"</span>, <span class="text-amber-300">"Honeypots"</span>],</div>
+              <div><span class="text-cyan-400">"certifications"</span>: [</div>
+              <div class="pl-4 text-indigo-300">"TESDA Cyber Threat Management",</div>
+              <div class="pl-4 text-indigo-300">"Cisco NetAcad: Networking Intermediate",</div>
+              <div class="pl-4 text-indigo-300">"Cisco NetAcad: Networking Beginner"</div>
+              <div>],</div>
+              <div><span class="text-cyan-400">"soft_strengths"</span>: [<span class="text-emerald-400">"Teamwork"</span>, <span class="text-emerald-400">"Clear Escalation"</span>, <span class="text-emerald-400">"Sociable"</span>]</div>
+            </div>
+
+            <div id="term-content-whoami" class="hidden space-y-3">
+              <div class="text-emerald-400">$ whoami --verbose</div>
+              <p class="text-slate-300 font-sans text-sm leading-relaxed">
+                I’m <strong class="text-white">Joshua Tudtud</strong>, an approachable, team-oriented cybersecurity analyst who thrives in collaborative SOC environments. Whether dissecting malicious packet captures in Wireshark or translating complex Wazuh alerts into plain English for stakeholders, I prioritize clarity, empathy, and continuous learning.
+              </p>
+              <div class="p-3 rounded-lg bg-slate-900/90 border border-slate-800 text-xs text-cyan-300">
+                "Strong security isn't just automated detection—it's people communicating clearly when every second counts."
+              </div>
+            </div>
+
+            <div id="term-content-stack" class="hidden space-y-2">
+              <div class="text-emerald-400">$ stack --list --verified</div>
+              <div class="grid grid-cols-2 gap-2 pt-1 text-xs">
+                <div class="p-2 rounded bg-slate-900 border border-slate-800">
+                  <span class="text-slate-500 block">SIEM &amp; LOGS</span>
+                  <span class="text-cyan-300 font-semibold">Splunk, Wazuh, Sysmon</span>
+                </div>
+                <div class="p-2 rounded bg-slate-900 border border-slate-800">
+                  <span class="text-slate-500 block">PACKET ANALYSIS</span>
+                  <span class="text-cyan-300 font-semibold">Wireshark, TCP/IP, DNS</span>
+                </div>
+                <div class="p-2 rounded bg-slate-900 border border-slate-800">
+                  <span class="text-slate-500 block">DECEPTION &amp; SIM</span>
+                  <span class="text-amber-300 font-semibold">Honeypots, GoPhish</span>
+                </div>
+                <div class="p-2 rounded bg-slate-900 border border-slate-800">
+                  <span class="text-slate-500 block">AI SECOPS</span>
+                  <span class="text-indigo-300 font-semibold">SOC-Buddy (LLM + RAG)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-4 mt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-500">
+              <span>status: <span class="text-emerald-400">online</span></span>
+              <span>clearance: <span class="text-slate-300">tier-1 ready</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Featured Capstone Application: SOC-Buddy -->
+    <section id="soc-buddy" class="space-y-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-slate-800 pb-6">
+        <div class="space-y-2">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-xs font-mono">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+            FEATURED CAPSTONE APPLICATION
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">
+            SOC-Buddy: AI-Assisted Tier-1 Security Analyst
+          </h2>
+          <p class="text-slate-400 max-w-3xl text-sm sm:text-base">
+            Built to solve small-business alert fatigue: classic ML filters high-volume Wazuh telemetry, a tool-grounded LLM agent investigates suspicious incidents using RAG playbooks, and a strict Human Approval Gate ensures safe, auditable containment.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-3 shrink-0">
+          <button id="walkthrough-btn" onclick="startSocWalkthrough()" class="px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs sm:text-sm font-semibold flex items-center gap-2 transition shadow-lg shadow-indigo-500/20">
+            <i data-lucide="play" class="w-4 h-4"></i>
+            <span>Replay SSH Attack Flow</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 4-Stage Pipeline Navigator -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+        <button onclick="selectSocStage(1)" id="stage-btn-1" class="stage-pill-active text-left p-4 rounded-xl border border-slate-800 bg-slate-900/60 hover:border-cyan-500/60 transition">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="font-mono text-xs text-cyan-400 font-bold">STAGE 01</span>
+            <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-cyan-500/10 text-cyan-300 border border-cyan-500/30">ML TRIAGE</span>
+          </div>
+          <div class="font-semibold text-white text-sm">Security Monitoring</div>
+          <div class="text-xs text-slate-400 mt-1">Wazuh ingestion &amp; XGBoost noise filtering</div>
+        </button>
+
+        <button onclick="selectSocStage(2)" id="stage-btn-2" class="text-left p-4 rounded-xl border border-slate-800 bg-slate-900/60 hover:border-cyan-500/60 transition">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="font-mono text-xs text-indigo-400 font-bold">STAGE 02</span>
+            <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-indigo-500/10 text-indigo-300 border border-indigo-500/30">LLM AGENT</span>
+          </div>
+          <div class="font-semibold text-white text-sm">AI Investigation</div>
+          <div class="text-xs text-slate-400 mt-1">Tool-calling trace &amp; Pydantic JSON verdict</div>
+        </button>
+
+        <button onclick="selectSocStage(3)" id="stage-btn-3" class="text-left p-4 rounded-xl border border-slate-800 bg-slate-900/60 hover:border-cyan-500/60 transition">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="font-mono text-xs text-violet-400 font-bold">STAGE 03</span>
+            <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-violet-500/10 text-violet-300 border border-violet-500/30">RAG + MITRE</span>
+          </div>
+          <div class="font-semibold text-white text-sm">Threat Intelligence</div>
+          <div class="text-xs text-slate-400 mt-1">ATT&amp;CK mapping, IOC intel &amp; IR playbooks</div>
+        </button>
+
+        <button onclick="selectSocStage(4)" id="stage-btn-4" class="text-left p-4 rounded-xl border border-slate-800 bg-slate-900/60 hover:border-cyan-500/60 transition">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="font-mono text-xs text-amber-400 font-bold">STAGE 04</span>
+            <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-amber-500/10 text-amber-300 border border-amber-500/30">HUMAN GATE</span>
+          </div>
+          <div class="font-semibold text-white text-sm">Human Approval</div>
+          <div class="text-xs text-slate-400 mt-1">Dry-run diffs, manual sign-off &amp; audit log</div>
+        </button>
+      </div>
+
+      <!-- Interactive Stage Viewport -->
+      <div class="glass-panel rounded-2xl p-6 sm:p-8 border border-slate-800 shadow-2xl">
+
+        <!-- STAGE 1: SECURITY MONITORING -->
+        <div id="soc-stage-1" class="space-y-6">
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-slate-800 pb-5">
+            <div>
+              <span class="font-mono text-xs text-cyan-400 uppercase tracking-wider">Stage 01 // Ingestion &amp; Classic ML Triage</span>
+              <h3 class="text-xl sm:text-2xl font-bold text-white mt-1">Live Wazuh Telemetry &amp; XGBoost Priority Scoring</h3>
+            </div>
+            <div class="flex flex-wrap gap-2 text-xs font-mono">
+              <button onclick="filterAlerts('ALL')" id="filter-ALL" class="px-3 py-1.5 rounded-lg bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 font-semibold">All (1,420)</button>
+              <button onclick="filterAlerts('HIGH')" id="filter-HIGH" class="px-3 py-1.5 rounded-lg bg-slate-900 text-slate-400 border border-slate-800 hover:text-white">High Priority (1)</button>
+              <button onclick="filterAlerts('MEDIUM')" id="filter-MEDIUM" class="px-3 py-1.5 rounded-lg bg-slate-900 text-slate-400 border border-slate-800 hover:text-white">Digest (18)</button>
+              <button onclick="filterAlerts('LOW')" id="filter-LOW" class="px-3 py-1.5 rounded-lg bg-slate-900 text-slate-400 border border-slate-800 hover:text-white">Auto-Closed (1,401)</button>
+            </div>
+          </div>
+
+          <!-- KPI Strip -->
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800">
+              <div class="text-xs text-slate-400 font-mono">RAW ALERTS (24H)</div>
+              <div class="text-2xl font-bold text-white font-mono mt-1">1,420</div>
+              <div class="text-[11px] text-slate-500 mt-1">Windows, Linux/SSH, Nginx</div>
+            </div>
+            <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800">
+              <div class="text-xs text-slate-400 font-mono">NOISE REDUCED</div>
+              <div class="text-2xl font-bold text-emerald-400 font-mono mt-1">98.6%</div>
+              <div class="text-[11px] text-emerald-500/80 mt-1">1,401 benign events auto-closed</div>
+            </div>
+            <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800">
+              <div class="text-xs text-slate-400 font-mono">ACTIVE CANDIDATE</div>
+              <div class="text-2xl font-bold text-red-400 font-mono mt-1">INC-2026-084</div>
+              <div class="text-[11px] text-red-400/80 mt-1">41 correlated SSH events</div>
+            </div>
+            <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800">
+              <div class="text-xs text-slate-400 font-mono">XGBOOST RISK SCORE</div>
+              <div class="text-2xl font-bold text-cyan-400 font-mono mt-1">92 / 100</div>
+              <div class="text-[11px] text-cyan-400/80 mt-1">Routed to AI Agent immediately</div>
+            </div>
+          </div>
+
+          <!-- Alert Stream Table -->
+          <div class="overflow-x-auto rounded-xl border border-slate-800">
+            <table class="w-full text-left border-collapse text-xs sm:text-sm">
+              <thead>
+                <tr class="bg-slate-900/95 border-b border-slate-800 font-mono text-xs text-slate-400">
+                  <th class="py-3 px-4">INCIDENT / RULE</th>
+                  <th class="py-3 px-4">SOURCE HOST</th>
+                  <th class="py-3 px-4">EVENT SUMMARY</th>
+                  <th class="py-3 px-4">ML SCORE</th>
+                  <th class="py-3 px-4">TRIAGE ROUTE</th>
+                </tr>
+              </thead>
+              <tbody id="alert-table-body" class="divide-y divide-slate-800/80 font-mono text-xs">
+                <tr data-tier="HIGH" class="bg-red-500/5 hover:bg-red-500/10 transition">
+                  <td class="py-3.5 px-4 font-bold text-red-400">INC-2026-084<span class="block text-[11px] text-slate-500 font-normal">Wazuh 5710 + 5715</span></td>
+                  <td class="py-3.5 px-4 text-slate-200">prod-web-01</td>
+                  <td class="py-3.5 px-4 font-sans text-slate-200">40 failed SSH logins + 1 successful <code class="text-cyan-300">admin</code> auth from <code class="text-red-300">185.220.101.42</code></td>
+                  <td class="py-3.5 px-4"><span class="px-2 py-1 rounded bg-red-500/20 text-red-300 font-bold">92 / 100</span></td>
+                  <td class="py-3.5 px-4"><span class="px-2.5 py-1 rounded-full bg-red-500/20 border border-red-500/40 text-red-300">Investigate Now</span></td>
+                </tr>
+                <tr data-tier="MEDIUM" class="hover:bg-slate-900/60 transition">
+                  <td class="py-3.5 px-4 text-amber-300">INC-2026-083<span class="block text-[11px] text-slate-500">Wazuh 31101</span></td>
+                  <td class="py-3.5 px-4 text-slate-300">nginx-edge-02</td>
+                  <td class="py-3.5 px-4 font-sans text-slate-300">Repeated HTTP 404 directory enumeration spike from single ASN</td>
+                  <td class="py-3.5 px-4"><span class="px-2 py-1 rounded bg-amber-500/20 text-amber-300">54 / 100</span></td>
+                  <td class="py-3.5 px-4"><span class="px-2.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300">Daily Digest</span></td>
+                </tr>
+                <tr data-tier="LOW" class="hover:bg-slate-900/60 transition">
+                  <td class="py-3.5 px-4 text-slate-400">ALT-99412<span class="block text-[11px] text-slate-500">Wazuh 5501</span></td>
+                  <td class="py-3.5 px-4 text-slate-400">win-hr-04</td>
+                  <td class="py-3.5 px-4 font-sans text-slate-400">Routine scheduled service logon during business hours</td>
+                  <td class="py-3.5 px-4"><span class="px-2 py-1 rounded bg-slate-800 text-slate-400">11 / 100</span></td>
+                  <td class="py-3.5 px-4"><span class="px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400">Auto-Closed</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- STAGE 2: AI INVESTIGATION -->
+        <div id="soc-stage-2" class="hidden space-y-6">
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-slate-800 pb-5">
+            <div>
+              <span class="font-mono text-xs text-indigo-400 uppercase tracking-wider">Stage 02 // Bounded LLM Reasoning Loop</span>
+              <h3 class="text-xl sm:text-2xl font-bold text-white mt-1">Autonomous Tool Calls &amp; Pydantic Structured Verdict</h3>
+            </div>
+            <div class="flex items-center gap-2 bg-slate-950 p-1 rounded-xl border border-slate-800 text-xs font-mono">
+              <button onclick="toggleVerdictView('formatted')" id="verdict-btn-formatted" class="px-3 py-1.5 rounded-lg bg-indigo-500/20 text-indigo-300 font-semibold transition">Analyst Summary</button>
+              <button onclick="toggleVerdictView('json')" id="verdict-btn-json" class="px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition">Raw Pydantic JSON</button>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            <!-- Tool Execution Trace -->
+            <div class="lg:col-span-6 space-y-3">
+              <div class="flex items-center justify-between text-xs font-mono text-slate-400">
+                <span>AGENT EXECUTION TRACE (4 / 8 MAX CALLS)</span>
+                <span class="text-emerald-400">PROMPT-INJECTION GUARD: ACTIVE</span>
+              </div>
+
+              <div class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 space-y-1.5">
+                <div class="flex items-center justify-between font-mono text-xs">
+                  <span class="text-cyan-400 font-semibold">1. lookup_ip("185.220.101.42")</span>
+                  <span class="text-emerald-400">142ms</span>
+                </div>
+                <p class="text-xs text-slate-400">Result: Known Tor Exit Node • AbuseIPDB Confidence: <span class="text-red-400 font-semibold">98%</span> (2,140 reports).</p>
+              </div>
+
+              <div class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 space-y-1.5">
+                <div class="flex items-center justify-between font-mono text-xs">
+                  <span class="text-cyan-400 font-semibold">2. get_login_history(user="admin", days=30)</span>
+                  <span class="text-emerald-400">88ms</span>
+                </div>
+                <p class="text-xs text-slate-400">Result: 0 prior logins from non-PH ASNs. Normal baseline: internal VPN subnet <code class="text-slate-300">10.24.0.0/24</code>.</p>
+              </div>
+
+              <div class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 space-y-1.5">
+                <div class="flex items-center justify-between font-mono text-xs">
+                  <span class="text-cyan-400 font-semibold">3. get_host_context("prod-web-01")</span>
+                  <span class="text-emerald-400">64ms</span>
+                </div>
+                <p class="text-xs text-slate-400">Result: Criticality <span class="text-amber-300 font-semibold">HIGH</span> • Customer-facing Ubuntu 24.04 web host.</p>
+              </div>
+
+              <div class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 space-y-1.5">
+                <div class="flex items-center justify-between font-mono text-xs">
+                  <span class="text-cyan-400 font-semibold">4. search_playbooks("SSH brute force compromise")</span>
+                  <span class="text-emerald-400">110ms</span>
+                </div>
+                <p class="text-xs text-slate-400">Result: Retrieved <span class="text-indigo-300 font-semibold">PB-04: Credential Brute-Force Containment</span> (NIST SP 800-61).</p>
+              </div>
+            </div>
+
+            <!-- Structured Verdict Output -->
+            <div class="lg:col-span-6">
+              <div id="verdict-view-formatted" class="h-full p-5 rounded-xl bg-slate-900/90 border border-indigo-500/30 flex flex-col justify-between space-y-4">
+                <div class="space-y-3">
+                  <div class="flex flex-wrap items-center justify-between gap-2">
+                    <span class="px-3 py-1 rounded-full bg-red-500/20 border border-red-500/40 text-red-300 font-mono text-xs font-bold">
+                      VERDICT: TRUE POSITIVE
+                    </span>
+                    <span class="font-mono text-xs text-slate-400">Confidence: <strong class="text-white">96%</strong> • Severity: <strong class="text-red-400">HIGH</strong></span>
+                  </div>
+
+                  <h4 class="text-base font-bold text-white">Plain-Language Summary for Owner / Lead</h4>
+                  <p class="text-sm text-slate-300 leading-relaxed">
+                    An automated brute-force attack originating from a known Tor exit node (<code class="text-cyan-300">185.220.101.42</code>) guessed the <code class="text-cyan-300">admin</code> password on your primary production web server (<code class="text-cyan-300">prod-web-01</code>) after 40 failed attempts.
+                  </p>
+
+                  <div class="space-y-1.5 pt-1">
+                    <div class="text-xs font-mono text-slate-400">CITED EVIDENCE:</div>
+                    <ul class="text-xs text-slate-300 space-y-1 list-disc pl-4">
+                      <li>40 consecutive <code class="text-slate-200">sshd</code> authentication failures followed by Rule 5715 success within 48 seconds.</li>
+                      <li>Source IP flagged in threat intel (98% abuse score) with zero historical admin activity.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="pt-3 border-t border-slate-800 flex items-center justify-between text-xs font-mono">
+                  <span class="text-violet-300">MITRE: T1110.001 (Password Guessing)</span>
+                  <button onclick="selectSocStage(3)" class="text-cyan-400 hover:underline">Inspect Intel &amp; Playbook →</button>
+                </div>
+              </div>
+
+              <pre id="verdict-view-json" class="hidden h-full p-4 rounded-xl bg-[#070A10] border border-slate-800 font-mono text-xs text-emerald-300 overflow-x-auto leading-relaxed">{
+  "incident_id": "INC-2026-084",
+  "verdict": "true_positive",
+  "confidence": 0.96,
+  "severity": "high",
+  "mitre_attack": ["T1110.001", "T1078"],
+  "summary": "Confirmed SSH brute-force compromise of admin account on prod-web-01 from Tor exit node 185.220.101.42.",
+  "evidence_refs": ["wazuh:5710x40", "wazuh:5715", "intel:abuseipdb_98"],
+  "recommended_actions": [
+    {"action": "block_ip", "target": "185.220.101.42", "tier": "impactful"},
+    {"action": "force_password_reset", "target": "admin", "tier": "impactful"}
+  ]
+}</pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- STAGE 3: THREAT INTELLIGENCE & RAG -->
+        <div id="soc-stage-3" class="hidden space-y-6">
+          <div class="border-b border-slate-800 pb-5">
+            <span class="font-mono text-xs text-violet-400 uppercase tracking-wider">Stage 03 // Grounded RAG &amp; External Enrichment</span>
+            <h3 class="text-xl sm:text-2xl font-bold text-white mt-1">MITRE ATT&amp;CK Context, IOC Reputation &amp; Playbook Grounding</h3>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <!-- Card 1: MITRE ATT&CK -->
+            <div class="p-5 rounded-xl bg-slate-900/90 border border-slate-800 space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded bg-violet-500/20 text-violet-300 font-mono text-xs font-bold">T1110.001</span>
+                <span class="text-xs font-mono text-slate-500">Credential Access</span>
+              </div>
+              <h4 class="font-bold text-white text-base">Brute Force: Password Guessing</h4>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Adversaries systematically guess passwords against exposed SSH services without prior knowledge of valid credentials, often pivoting into <span class="text-slate-200">T1078 (Valid Accounts)</span> upon success.
+              </p>
+              <div class="pt-2 border-t border-slate-800 text-[11px] font-mono text-violet-300">
+                Mapped automatically via pgvector similarity (0.91)
+              </div>
+            </div>
+
+            <!-- Card 2: IOC Enrichment -->
+            <div class="p-5 rounded-xl bg-slate-900/90 border border-slate-800 space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded bg-red-500/20 text-red-300 font-mono text-xs font-bold">IOC ENRICHMENT</span>
+                <span class="text-xs font-mono text-slate-500">Cached 24h</span>
+              </div>
+              <h4 class="font-bold text-white text-base">185.220.101.42</h4>
+              <ul class="text-xs text-slate-300 space-y-1.5 font-mono">
+                <li class="flex justify-between"><span class="text-slate-500">ASN:</span> <span>AS205100 (Tor Exit)</span></li>
+                <li class="flex justify-between"><span class="text-slate-500">Abuse Score:</span> <span class="text-red-400">98 / 100</span></li>
+                <li class="flex justify-between"><span class="text-slate-500">Prior Sightings:</span> <span>0 internal</span></li>
+                <li class="flex justify-between"><span class="text-slate-500">Targeted User:</span> <span>admin (sudoer)</span></li>
+              </ul>
+              <div class="pt-2 border-t border-slate-800 text-[11px] font-mono text-slate-400">
+                PII Masked before cloud LLM inference
+              </div>
+            </div>
+
+            <!-- Card 3: RAG Playbook -->
+            <div class="p-5 rounded-xl bg-slate-900/90 border border-slate-800 space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded bg-cyan-500/20 text-cyan-300 font-mono text-xs font-bold">PLAYBOOK PB-04</span>
+                <span class="text-xs font-mono text-slate-500">NIST IR Aligned</span>
+              </div>
+              <h4 class="font-bold text-white text-base">SSH Account Compromise SOP</h4>
+              <ol class="text-xs text-slate-300 space-y-1.5 list-decimal pl-4">
+                <li>Block malicious source IP at host/edge firewall (<code class="text-cyan-300">ufw</code>).</li>
+                <li>Invalidate active SSH sessions &amp; rotate <code class="text-cyan-300">admin</code> credentials.</li>
+                <li>Audit <code class="text-cyan-300">~/.ssh/authorized_keys</code> for unauthorized persistence.</li>
+              </ol>
+              <div class="pt-2 border-t border-slate-800 text-[11px] font-mono text-cyan-300">
+                Zero hallucinated steps — 100% SOP cited
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STAGE 4: HUMAN APPROVAL GATE -->
+        <div id="soc-stage-4" class="hidden space-y-6">
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-slate-800 pb-5">
+            <div>
+              <span class="font-mono text-xs text-amber-400 uppercase tracking-wider">Stage 04 // Tiered Safety &amp; Immutable Audit Trail</span>
+              <h3 class="text-xl sm:text-2xl font-bold text-white mt-1">Human Approval Gate &amp; Reversible Containment</h3>
+            </div>
+            <div class="flex items-center gap-2 text-xs font-mono">
+              <span class="px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">Read-Only: Auto</span>
+              <span class="px-2.5 py-1 rounded bg-amber-500/15 text-amber-300 border border-amber-500/40">Impactful: Human Sign-Off</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            <!-- Approval Queue -->
+            <div class="lg:col-span-7 space-y-4">
+              <!-- Action 1 -->
+              <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div class="space-y-1">
+                  <div class="flex items-center gap-2">
+                    <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-amber-500/20 text-amber-300 border border-amber-500/30">IMPACTFUL</span>
+                    <span class="font-mono text-sm font-bold text-white">Block IP 185.220.101.42</span>
+                  </div>
+                  <p class="text-xs text-slate-400">Adds deny rule on <code class="text-slate-300">prod-web-01</code> UFW firewall. Reversible with 1-click undo.</p>
+                </div>
+                <div class="flex items-center gap-2 shrink-0">
+                  <button onclick="openDryRunModal('block_ip')" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 font-mono text-xs border border-slate-700 transition">
+                    Dry-Run
+                  </button>
+                  <button id="btn-approve-ip" onclick="toggleApproveAction('ip')" class="px-3.5 py-1.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold text-xs transition">
+                    Approve
+                  </button>
+                </div>
+              </div>
+
+              <!-- Action 2 -->
+              <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div class="space-y-1">
+                  <div class="flex items-center gap-2">
+                    <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-amber-500/20 text-amber-300 border border-amber-500/30">IMPACTFUL</span>
+                    <span class="font-mono text-sm font-bold text-white">Force Password Reset: admin</span>
+                  </div>
+                  <p class="text-xs text-slate-400">Terminates active SSH TTY sessions and expires current <code class="text-slate-300">admin</code> credential.</p>
+                </div>
+                <div class="flex items-center gap-2 shrink-0">
+                  <button onclick="openDryRunModal('reset_pw')" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 font-mono text-xs border border-slate-700 transition">
+                    Dry-Run
+                  </button>
+                  <button id="btn-approve-pw" onclick="toggleApproveAction('pw')" class="px-3.5 py-1.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold text-xs transition">
+                    Approve
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Live Immutable Audit Log -->
+            <div class="lg:col-span-5 p-4 rounded-xl bg-[#070A10] border border-slate-800 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between border-b border-slate-800 pb-2.5 mb-3">
+                  <span class="font-mono text-xs font-bold text-slate-300">IMMUTABLE AUDIT LOG</span>
+                  <span class="font-mono text-[11px] text-emerald-400">APPEND-ONLY</span>
+                </div>
+                <div id="audit-log-feed" class="space-y-2 font-mono text-[11px] max-h-44 overflow-y-auto pr-1">
+                  <div class="text-slate-400"><span class="text-slate-600">[03:41:02]</span> ML_TRIAGE scored INC-2026-084 = 92/100</div>
+                  <div class="text-slate-400"><span class="text-slate-600">[03:41:05]</span> AGENT_VERDICT true_positive (conf: 0.96)</div>
+                  <div class="text-amber-300"><span class="text-slate-600">[03:41:06]</span> GATE_HOLD awaiting human sign-off (2 actions)</div>
+                </div>
+              </div>
+              <div class="pt-3 mt-3 border-t border-slate-800/80 text-[11px] font-mono text-slate-500">
+                Operator: Joshua Tudtud (Tier-1 Reviewer)
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. Hands-On Security Labs -->
+    <section id="labs" class="space-y-8">
+      <div class="space-y-2">
+        <span class="font-mono text-xs text-cyan-400 uppercase tracking-wider">Practical Tooling &amp; Blue-Team Exercises</span>
+        <h2 class="text-3xl font-bold text-white tracking-tight">Hands-On Security Labs</h2>
+        <p class="text-slate-400 max-w-2xl text-sm sm:text-base">
+          Practical experience analyzing live network traffic, hunting anomalies in SIEM logs, and studying attacker behavior through controlled simulations.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Lab 1: Wireshark -->
+        <div class="glass-panel rounded-2xl p-6 border border-slate-800 hover:border-cyan-500/50 transition flex flex-col justify-between space-y-5">
+          <div class="space-y-3">
+            <div class="w-11 h-11 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
+              <i data-lucide="activity" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white">Network Traffic &amp; PCAP Forensics</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Deep-packet inspection using <span class="text-slate-200 font-medium">Wireshark</span> to reconstruct TCP streams, spot ARP spoofing, analyze suspicious DNS queries, and isolate anomalous HTTP/SMB payloads.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-800/80 font-mono text-[11px] text-cyan-300">
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">Wireshark</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">TCP/IP</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">PCAP Triage</span>
+          </div>
+        </div>
+
+        <!-- Lab 2: Splunk -->
+        <div class="glass-panel rounded-2xl p-6 border border-slate-800 hover:border-emerald-500/50 transition flex flex-col justify-between space-y-5">
+          <div class="space-y-3">
+            <div class="w-11 h-11 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+              <i data-lucide="search-code" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white">SIEM Threat Hunting &amp; SPL Dashboards</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Ingesting Windows Event Logs and Linux auth telemetry into <span class="text-slate-200 font-medium">Splunk</span>, crafting SPL correlation searches for brute-force spikes, and building clear SOC triage views.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-800/80 font-mono text-[11px] text-emerald-300">
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">Splunk</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">SPL Queries</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">Log Correlation</span>
+          </div>
+        </div>
+
+        <!-- Lab 3: GoPhish & Honeypots -->
+        <div class="glass-panel rounded-2xl p-6 border border-slate-800 hover:border-amber-500/50 transition flex flex-col justify-between space-y-5">
+          <div class="space-y-3">
+            <div class="w-11 h-11 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400">
+              <i data-lucide="radar" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white">Phishing Simulation &amp; Honeypot Telemetry</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Running authorized awareness campaigns with <span class="text-slate-200 font-medium">GoPhish</span> and deploying isolated <span class="text-slate-200 font-medium">Honeypots</span> to capture real-world credential stuffing and attacker TTPs.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-800/80 font-mono text-[11px] text-amber-300">
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">GoPhish</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">Honeypot Ops</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">IOC Capture</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Skills Matrix (Hard & Soft Skills) -->
+    <section id="skills" class="space-y-8">
+      <div class="space-y-2">
+        <span class="font-mono text-xs text-cyan-400 uppercase tracking-wider">Balanced Technical &amp; Human Capabilities</span>
+        <h2 class="text-3xl font-bold text-white tracking-tight">Core Competencies</h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <!-- Hard Skills -->
+        <div class="lg:col-span-7 glass-panel rounded-2xl p-6 sm:p-8 border border-slate-800 space-y-6">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
+              <i data-lucide="terminal" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">Technical &amp; Cybersecurity Skills</h3>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800 space-y-1.5">
+              <div class="font-mono text-xs text-cyan-400 font-semibold">SIEM &amp; LOG MONITORING</div>
+              <div class="text-sm font-semibold text-white">Splunk &amp; Wazuh</div>
+              <p class="text-xs text-slate-400">Alert triage, SPL search queries, false-positive reduction, and host log correlation.</p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800 space-y-1.5">
+              <div class="font-mono text-xs text-cyan-400 font-semibold">PACKET &amp; PROTOCOL ANALYSIS</div>
+              <div class="text-sm font-semibold text-white">Wireshark &amp; TCP/IP</div>
+              <p class="text-xs text-slate-400">Packet capture filtering, subnetting, VLANs, routing fundamentals, and anomaly detection.</p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800 space-y-1.5">
+              <div class="font-mono text-xs text-amber-400 font-semibold">THREAT SIMULATION &amp; DECEPTION</div>
+              <div class="text-sm font-semibold text-white">GoPhish &amp; Honeypots</div>
+              <p class="text-xs text-slate-400">Phishing resilience testing, decoy service deployment, and attacker behavior observation.</p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800 space-y-1.5">
+              <div class="font-mono text-xs text-indigo-400 font-semibold">THREAT MANAGEMENT &amp; FRAMEWORKS</div>
+              <div class="text-sm font-semibold text-white">MITRE ATT&amp;CK &amp; Incident Triage</div>
+              <p class="text-xs text-slate-400">Structured escalation workflows, IOC enrichment, and documented playbook execution.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="lg:col-span-5 glass-panel rounded-2xl p-6 sm:p-8 border border-slate-800 space-y-6">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+              <i data-lucide="users" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">Interpersonal &amp; SOC Soft Skills</h3>
+          </div>
+
+          <div class="space-y-3.5">
+            <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <div class="font-semibold text-white text-sm flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                Collaborative Team Player
+              </div>
+              <p class="text-xs text-slate-400 mt-1">Thrives in shift-based SOC handoffs, sharing triage notes and supporting teammates during high-alert volumes.</p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <div class="font-semibold text-white text-sm flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+                Clear &amp; Empathetic Communicator
+              </div>
+              <p class="text-xs text-slate-400 mt-1">Translates dense technical alerts into plain-language summaries for non-technical managers and end users.</p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <div class="font-semibold text-white text-sm flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-indigo-400"></span>
+                Sociable &amp; Relationship-Driven
+              </div>
+              <p class="text-xs text-slate-400 mt-1">Builds positive rapport across IT, engineering, and business departments to foster a welcoming security culture.</p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <div class="font-semibold text-white text-sm flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+                Composure Under Pressure &amp; Adaptability
+              </div>
+              <p class="text-xs text-slate-400 mt-1">Maintains methodical focus during live incident simulations while rapidly adopting new security tools.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Verified Certifications -->
+    <section id="certifications" class="space-y-8">
+      <div class="space-y-2">
+        <span class="font-mono text-xs text-cyan-400 uppercase tracking-wider">Credentials &amp; Training</span>
+        <h2 class="text-3xl font-bold text-white tracking-tight">Verified Certifications</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Cert 1: TESDA -->
+        <div class="glass-panel rounded-2xl p-6 border border-cyan-500/30 relative overflow-hidden">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-2.5 py-1 rounded bg-cyan-500/15 text-cyan-300 font-mono text-xs font-bold">TESDA CERTIFIED</span>
+            <i data-lucide="shield" class="w-5 h-5 text-cyan-400"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white">Cyber Threat Management</h3>
+          <p class="text-xs font-mono text-slate-400 mt-1">Technical Education and Skills Development Authority</p>
+          <p class="text-xs text-slate-300 mt-3 leading-relaxed">
+            Validated competency in threat identification, vulnerability assessment, log monitoring, and structured incident response procedures.
+          </p>
+        </div>
+
+        <!-- Cert 2: Cisco Intermediate -->
+        <div class="glass-panel rounded-2xl p-6 border border-indigo-500/30 relative overflow-hidden">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-2.5 py-1 rounded bg-indigo-500/15 text-indigo-300 font-mono text-xs font-bold">CISCO NETACAD</span>
+            <i data-lucide="network" class="w-5 h-5 text-indigo-400"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white">Networking Intermediate</h3>
+          <p class="text-xs font-mono text-slate-400 mt-1">Cisco Networking Academy</p>
+          <p class="text-xs text-slate-300 mt-3 leading-relaxed">
+            Practical mastery of routing and switching concepts, VLAN segmentation, ACL traffic filtering, and enterprise network troubleshooting.
+          </p>
+        </div>
+
+        <!-- Cert 3: Cisco Beginner -->
+        <div class="glass-panel rounded-2xl p-6 border border-emerald-500/30 relative overflow-hidden">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-2.5 py-1 rounded bg-emerald-500/15 text-emerald-300 font-mono text-xs font-bold">CISCO NETACAD</span>
+            <i data-lucide="globe" class="w-5 h-5 text-emerald-400"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white">Networking Beginner</h3>
+          <p class="text-xs font-mono text-slate-400 mt-1">Cisco Networking Academy</p>
+          <p class="text-xs text-slate-300 mt-3 leading-relaxed">
+            Foundational command of OSI/TCP-IP models, IPv4/IPv6 addressing, Ethernet framing, and core network security hygiene.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Contact & Recruiter CTA -->
+    <section id="contact" class="glass-panel rounded-2xl p-8 sm:p-10 border border-slate-800">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-6 space-y-4">
+          <span class="font-mono text-xs text-cyan-400 uppercase tracking-wider">Ready to Contribute</span>
+          <h2 class="text-3xl font-bold text-white">Let’s Strengthen Your Security Team</h2>
+          <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+            Looking for an approachable, analytical Junior SOC Analyst who brings Splunk, Wireshark, threat deception labs, and clear cross-team communication? Reach out directly below.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-3 pt-2">
+            <button onclick="copyEmail()" class="px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 font-mono text-xs sm:text-sm flex items-center gap-2 transition">
+              <i data-lucide="copy" class="w-4 h-4 text-cyan-400"></i>
+              <span id="email-copy-label">joshua.tudtud.sec@example.com</span>
+            </button>
+          </div>
+        </div>
+
+        <form onsubmit="handleContactSubmit(event)" class="lg:col-span-6 space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <input type="text" required placeholder="Your Name / Organization" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500" />
+            <input type="email" required placeholder="Work Email" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500" />
+          </div>
+          <textarea rows="3" required placeholder="Message regarding Junior SOC Analyst roles, internships, or SOC-Buddy..." class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500"></textarea>
+          <button type="submit" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold text-sm transition shadow-lg shadow-cyan-500/20">
+            Send Inquiry
+          </button>
+          <p id="contact-feedback" class="hidden text-xs font-mono text-emerald-400">
+            ✓ Message queued! Thank you for reaching out to Joshua Tudtud.
+          </p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-slate-800/80 py-8 text-center text-xs font-mono text-slate-500">
+    © 2026 Joshua Tudtud • Cybersecurity &amp; SOC Operations Portfolio
+  </footer>
+
+  <!-- Dry-Run Command Preview Modal -->
+  <div id="dry-run-modal" class="hidden fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-[#0D121D] border border-slate-700 rounded-2xl max-w-lg w-full p-6 space-y-4 shadow-2xl">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+        <span class="font-mono text-xs text-amber-400 font-bold">DRY-RUN EXECUTION PREVIEW (NO STATE CHANGED)</span>
+        <button onclick="closeDryRunModal()" class="text-slate-400 hover:text-white">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+      <pre id="dry-run-code" class="p-4 rounded-xl bg-black/80 border border-slate-800 font-mono text-xs text-cyan-300 overflow-x-auto leading-relaxed"></pre>
+      <div class="flex justify-end">
+        <button onclick="closeDryRunModal()" class="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-white">
+          Close Preview
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    lucide.createIcons();
+
+    // Terminal Tab Switcher
+    function switchTerminalTab(tab) {
+      ['profile', 'whoami', 'stack'].forEach(t => {
+        document.getElementById('term-content-' + t).classList.add('hidden');
+        const btn = document.getElementById('term-tab-' + t);
+        btn.classList.remove('bg-cyan-500/20', 'text-cyan-300', 'font-semibold');
+        btn.classList.add('text-slate-400');
+      });
+      document.getElementById('term-content-' + tab).classList.remove('hidden');
+      const activeBtn = document.getElementById('term-tab-' + tab);
+      activeBtn.classList.add('bg-cyan-500/20', 'text-cyan-300', 'font-semibold');
+      activeBtn.classList.remove('text-slate-400');
+    }
+
+    // SOC-Buddy Stage Switcher
+    function selectSocStage(stageNum) {
+      [1, 2, 3, 4].forEach(n => {
+        document.getElementById('soc-stage-' + n).classList.add('hidden');
+        document.getElementById('stage-btn-' + n).classList.remove('stage-pill-active');
+      });
+      document.getElementById('soc-stage-' + stageNum).classList.remove('hidden');
+      document.getElementById('stage-btn-' + stageNum).classList.add('stage-pill-active');
+    }
+
+    // Guided Walkthrough Replay
+    let walkthroughTimer = null;
+    function startSocWalkthrough() {
+      if (walkthroughTimer) clearInterval(walkthroughTimer);
+      let step = 1;
+      selectSocStage(step);
+      const btn = document.getElementById('walkthrough-btn');
+      btn.innerHTML = '<i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i><span>Simulating Pipeline...</span>';
+      lucide.createIcons();
+
+      walkthroughTimer = setInterval(() => {
+        step++;
+        if (step <= 4) {
+          selectSocStage(step);
+        } else {
+          clearInterval(walkthroughTimer);
+          btn.innerHTML = '<i data-lucide="play" class="w-4 h-4"></i><span>Replay SSH Attack Flow</span>';
+          lucide.createIcons();
+        }
+      }, 2200);
+    }
+
+    // Stage 1 Alert Filter
+    function filterAlerts(tier) {
+      ['ALL', 'HIGH', 'MEDIUM', 'LOW'].forEach(t => {
+        const b = document.getElementById('filter-' + t);
+        b.classList.remove('bg-cyan-500/20', 'text-cyan-300', 'border-cyan-500/40', 'font-semibold');
+        b.classList.add('bg-slate-900', 'text-slate-400', 'border-slate-800');
+      });
+      const active = document.getElementById('filter-' + tier);
+      active.classList.add('bg-cyan-500/20', 'text-cyan-300', 'border-cyan-500/40', 'font-semibold');
+      active.classList.remove('bg-slate-900', 'text-slate-400', 'border-slate-800');
+
+      document.querySelectorAll('#alert-table-body tr').forEach(row => {
+        if (tier === 'ALL' || row.dataset.tier === tier) {
+          row.classList.remove('hidden');
+        } else {
+          row.classList.add('hidden');
+        }
+      });
+    }
+
+    // Stage 2 Verdict Toggle
+    function toggleVerdictView(mode) {
+      const fView = document.getElementById('verdict-view-formatted');
+      const jView = document.getElementById('verdict-view-json');
+      const fBtn = document.getElementById('verdict-btn-formatted');
+      const jBtn = document.getElementById('verdict-btn-json');
+
+      if (mode === 'formatted') {
+        fView.classList.remove('hidden');
+        jView.classList.add('hidden');
+        fBtn.classList.add('bg-indigo-500/20', 'text-indigo-300', 'font-semibold');
+        jBtn.classList.remove('bg-indigo-500/20', 'text-indigo-300', 'font-semibold');
+      } else {
+        jView.classList.remove('hidden');
+        fView.classList.add('hidden');
+        jBtn.classList.add('bg-indigo-500/20', 'text-indigo-300', 'font-semibold');
+        fBtn.classList.remove('bg-indigo-500/20', 'text-indigo-300', 'font-semibold');
+      }
+    }
+
+    // Stage 4 Dry-Run Modal
+    function openDryRunModal(action) {
+      const code = document.getElementById('dry-run-code');
+      if (action === 'block_ip') {
+        code.textContent = `$ ssh soc-runner@prod-web-01 --dry-run\n> sudo ufw insert 1 deny from 185.220.101.42 to any\n[DRY-RUN] Rule validated: DENY IN 185.220.101.42\n[ROLLBACK] Undo command ready: sudo ufw delete deny from 185.220.101.42`;
+      } else {
+        code.textContent = `$ ssh soc-runner@prod-web-01 --dry-run\n> sudo pkill -u admin -t pts/0 && sudo chage -d 0 admin\n[DRY-RUN] 1 active SSH session queued for termination\n[DRY-RUN] Password expiry flag staged for user: admin`;
+      }
+      document.getElementById('dry-run-modal').classList.remove('hidden');
+    }
+    function closeDryRunModal() {
+      document.getElementById('dry-run-modal').classList.add('hidden');
+    }
+
+    // Stage 4 Approve / Undo Action + Audit Log
+    const approvedState = { ip: false, pw: false };
+    function toggleApproveAction(key) {
+      approvedState[key] = !approvedState[key];
+      const btn = document.getElementById('btn-approve-' + key);
+      const feed = document.getElementById('audit-log-feed');
+      const now = new Date().toTimeString().split(' ')[0];
+      const label = key === 'ip' ? 'BLOCK_IP (185.220.101.42)' : 'FORCE_PW_RESET (admin)';
+
+      const entry = document.createElement('div');
+      if (approvedState[key]) {
+        btn.textContent = 'Undo Action';
+        btn.classList.remove('bg-emerald-500', 'hover:bg-emerald-400', 'text-slate-950');
+        btn.classList.add('bg-slate-800', 'hover:bg-slate-700', 'text-amber-300', 'border', 'border-amber-500/40');
+        entry.className = 'text-emerald-400';
+        entry.innerHTML = `<span class="text-slate-600">[${now}]</span> APPROVED &amp; EXECUTED ${label} by J. Tudtud`;
+      } else {
+        btn.textContent = 'Approve';
+        btn.classList.add('bg-emerald-500', 'hover:bg-emerald-400', 'text-slate-950');
+        btn.classList.remove('bg-slate-800', 'hover:bg-slate-700', 'text-amber-300', 'border', 'border-amber-500/40');
+        entry.className = 'text-amber-300';
+        entry.innerHTML = `<span class="text-slate-600">[${now}]</span> REVERTED ${label} via operator undo`;
+      }
+      feed.appendChild(entry);
+      feed.scrollTop = feed.scrollHeight;
+    }
+
+    // Contact Helpers
+    function copyEmail() {
+      navigator.clipboard.writeText('joshua.tudtud.sec@example.com');
+      const lbl = document.getElementById('email-copy-label');
+      lbl.textContent = 'Copied to clipboard!';
+      setTimeout(() => {
+        lbl.textContent = 'joshua.tudtud.sec@example.com';
+      }, 2000);
+    }
+
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      document.getElementById('contact-feedback').classList.remove('hidden');
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
